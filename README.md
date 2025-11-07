@@ -8,7 +8,13 @@
 - [x] hero
 - [x] login
 - [x] dashboard
+- [x] profile
+- [x] cv editor
 - [ ] train
-- [ ] profile
-- [ ] cv editor
-- [ ]
+- [ ] task
+
+
+- [ ] logout
+- [ ] protected routes
+- [ ] 
+- [ ] 

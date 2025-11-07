@@ -2,9 +2,12 @@ import LangToggle from "@/components/lang-toggle";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export default function Hero() {
+  const navigate = useNavigate()
+
   return <div className="flex flex-col items-center sticky">
     <div className="flex flex-col items-center w-full border-b border-border">
       <div className='flex items-center justify-between min-w-[80vw] py-4'>
@@ -50,17 +53,17 @@ export default function Hero() {
         <div className="flex gap-2">
           <ModeToggle />
           <LangToggle />
-          <Button className="mr-2" variant={"ghost"}>Login</Button>
-          <Button>Sign up</Button>
+          <Button onClick={() => navigate('/login')} className="mr-2" variant={"ghost"}>Login</Button>
+          <Button onClick={() => navigate('/login')}>Sign up</Button>
         </div>
       </div>
     </div>
 
     <section className="flex flex-col justify-center ml-20 mt-36 min-w-[80vw]">
-      <h1 className="font-bold text-6xl mb-5">Elegant is a AI CV creator<br />and trainer</h1>
+      <h1 className="font-bold text-6xl mb-5">Elegant: an AI app that will<br />make you hired</h1>
       <h2 className="text-xl text-muted-fg mb-9">All you need to become a developer.<br/>Some other unneeded text...</h2>
       <div className="flex gap-2">
-        <Button>Create CV now</Button>
+        <Button size={"lg"} onClick={() => navigate('/login')}>Create CV now</Button>
         <p></p>
       </div>
     </section>

@@ -1,7 +1,7 @@
-import { jsPDF } from "jspdf";
+// import { jsPDF } from "jspdf";
 import { Button } from "@/components/ui/button";
-import { Document, Packer, Paragraph, TextRun } from "docx";
-import { saveAs } from "file-saver";
+// import { Document, Packer, Paragraph, TextRun } from "docx";
+// import { saveAs } from "file-saver";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";

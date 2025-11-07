@@ -15,7 +15,7 @@ export default function LangToggle() {
   ]
 
   return <DropdownMenu>
-    <DropdownMenuTrigger>
+    <DropdownMenuTrigger asChild>
       <Button size={"icon"} variant={"outline"}>
         <Globe className="h-[1.2rem] w-[1.2rem]" />
       </Button>
