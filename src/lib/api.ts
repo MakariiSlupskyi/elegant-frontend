@@ -1,7 +1,7 @@
 import type { User } from "@/types/types"
 
 export async function getCurrentUser(): Promise<User> {
-  const response = await fetch(`http://localhost:8080/auth/me`, {
+  const response = await fetch(`http://localhost:8080/me`, {
     credentials: 'include'
   })
 
@@ -13,7 +13,7 @@ export async function getCurrentUser(): Promise<User> {
 }
 
 export async function logoutUser() {
-  const responce = await fetch('http://localhost:8080/auth/logout', { credentials: 'include'})
+  const responce = await fetch('http://localhost:8080/logout', { credentials: 'include'})
   
   if (!responce.ok) {
     throw new Error("Couldn't logout")

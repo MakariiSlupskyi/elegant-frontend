@@ -3,6 +3,7 @@ export type CV = {
   position: string,
   summary?: string,
   skills?: string,
+  experience?: string,
   edu?: string,
 }
 
@@ -16,5 +17,7 @@ export type User = {
 
 export type Test = {
   title: string,
-  time_limit: string,
+  time_limit: number,
+  tags: string[]
+  tasks: { type: string, data: any }[]
 }

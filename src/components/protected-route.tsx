@@ -6,7 +6,5 @@ export const ProtectedRoute = () => {
 
   if (loading) return <div>Loading...</div> // or spinner
 
-  console.log("user:")
-  
   return user ? <Outlet /> : <Navigate to="/login" replace />
 }

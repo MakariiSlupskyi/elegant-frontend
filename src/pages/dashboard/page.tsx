@@ -19,7 +19,6 @@ export default function Dashboard() {
     try {
       const userData = await getCurrentUser()
       setUser(userData)
-      console.log(userData)
     } catch (error) {
       console.log('Not authenticated')
     } finally {
@@ -39,10 +38,10 @@ export default function Dashboard() {
   ]
   
   return <div className="flex flex-col items-center">
-    <NavBar page="Dashboard" />
+    <NavBar path={["Dashboard"]}/>
 
-    <div className="w-[80vw] pt-10">
-      <Button className="mb-8">Start training</Button>
+    <div className="w-[80vw] pt-12">
+      <Button onClick={() => navigate('/train')} className="mb-8 mr-2">Start training</Button>
       <Button onClick={handleLogout} className="mb-8">Logout</Button>
 
       <div>

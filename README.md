@@ -10,11 +10,19 @@
 - [x] dashboard
 - [x] profile
 - [x] cv editor
-- [ ] train
-- [ ] task
+- [x] train
 
+- [x] logout
+- [x] protected routes
 
-- [ ] logout
-- [ ] protected routes
-- [ ] 
-- [ ] 
+- [ ] quize task
+- [ ] open task
+- [ ] live code  task
+- [ ] cv templates
+
+- [ ] cv rollback
+
+- [ ] correct profile
+- [ ] complete hero
+- [ ] 404 page
+

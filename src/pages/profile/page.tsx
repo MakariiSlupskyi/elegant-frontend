@@ -27,7 +27,7 @@ export default function Profile() {
 
 
   return <div className="flex flex-col items-center h-screen">
-    <NavBar page="Profile" />
+    <NavBar path={["Profile"]} />
 
     <div className="flex flex-col items-start w-[70vw] h-full my-20">
       <p className="font-bold text-lg mb-6">Your Profile</p>

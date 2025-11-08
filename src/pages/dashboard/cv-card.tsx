@@ -1,8 +1,11 @@
 import type { CV } from "@/types/types";
 import { EllipsisVertical, Plus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export function CVCard({ cv }: { cv: CV }) {
-  return <div className="border border-border rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
+  const navigate = useNavigate()
+
+  return <div onClick={() => navigate('/cv_editor')} className="border border-border rounded-xl transition-all shadow-sm hover:shadow-md hover:-translate-y-1">
     <div className="w-40 h-20 bg-accent rounded-t-xl" />
     <div className="flex items-end justify-between p-3 pb-4">
       <div className="">

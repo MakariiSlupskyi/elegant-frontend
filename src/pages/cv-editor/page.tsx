@@ -9,12 +9,16 @@ import { Textarea } from "@/components/ui/textarea";
 import NavBar from "@/components/nav-bar";
 import type { CV } from "@/types/types";
 import { useState } from "react";
+import { exportCV } from "@/lib/exportCV";
 
 export default function CVEditor() {
   const [cvData, setCvData] = useState<CV>({
-    title: "Main Go CV",
-    position: "Main Go CV",
-    edu: "PL KPI of Kyiv",
+    title: "Main front",
+    position: "Frontend Developer",
+    summary: "Passionate about building responsive, interactive UIs.",
+    skills: "React, TypeScript, Tailwind, Node.js",
+    experience: "Worked on various SaaS products with modern web stack.",
+    edu: "B.S. in Computer Science, Kyiv Polytechnic",
   });
 
   const handleChange = (
@@ -27,11 +31,20 @@ export default function CVEditor() {
     }));
   };
 
+  const cv: CV = {
+    title: "Main front",
+    position: "Frontend Developer",
+    summary: "Passionate about building responsive, interactive UIs.",
+    skills: "React, TypeScript, Tailwind, Node.js",
+    experience: "Worked on various SaaS products with modern web stack.",
+    edu: "B.S. in Computer Science, Kyiv Polytechnic",
+  };
+
 
   return <div className="flex flex-col h-screen items-center sticky">
-    <NavBar page="CV Editor" />
+    <NavBar path={["CV Editor"]} className="fixed" />
 
-    <div className="flex gap-20 justify-center py-20 h-full">
+    <div className="flex gap-20 justify-center pt-30 pb-20 h-full">
       <div className="w-[30vw]">
         <Tabs defaultValue="manual">
           <TabsList>
@@ -65,8 +78,8 @@ export default function CVEditor() {
           </div>
 
           <div>
-            <Button className="mr-2">Export PDF</Button>
-            <Button>Export DOCX</Button>
+            <Button onClick={() => exportCV(cv, "classic", "pdf")} className="mr-2">Export PDF</Button>
+            <Button onClick={() => exportCV(cv, "classic", "docx")}>Export DOCX</Button>
           </div>
         </div>
 

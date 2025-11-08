@@ -61,9 +61,9 @@ export default function Hero() {
 
     <section className="flex flex-col justify-center ml-20 mt-36 min-w-[80vw]">
       <h1 className="font-bold text-6xl mb-5">Elegant: an AI app that will<br />make you hired</h1>
-      <h2 className="text-xl text-muted-fg mb-9">All you need to become a developer.<br/>Some other unneeded text...</h2>
+      <h2 className="text-xl text-muted-fg mb-9">All you need to become a developer.<br/>Quick and elegantly.</h2>
       <div className="flex gap-2">
-        <Button size={"lg"} onClick={() => navigate('/login')}>Create CV now</Button>
+        <Button size={"lg"} onClick={() => navigate('/login')}>Start now!</Button>
         <p></p>
       </div>
     </section>

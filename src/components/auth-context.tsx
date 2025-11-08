@@ -20,7 +20,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Check auth on mount
   useEffect(() => {
-    fetch("http://localhost:8080/auth/me", { credentials: "include" })
+    fetch("http://localhost:8080/me", { credentials: "include" })
       .then(res => res.json())
       .then(data => setUser(data.hasOwnProperty('error') ? null : data))
       .catch(() => setUser(null))
